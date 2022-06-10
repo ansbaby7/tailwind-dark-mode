@@ -3,7 +3,7 @@ import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 
 const App = () => {
-  const [theme,setTheme] = useState('light');
+  const [theme,setTheme] = useState(localStorage.theme);
   const handleClick = () => {
     setTheme(theme === 'dark'? 'light':'dark');
   };
@@ -14,6 +14,7 @@ const App = () => {
 		} else {
 			document.documentElement.classList.remove('dark');
 		}
+    localStorage.setItem('theme',theme)
   },[theme])
 
   return (
