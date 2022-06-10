@@ -1,7 +1,7 @@
 const Navbar = ({ theme, onButtonClick }) => {
   return (
     <div className="p-4 flex justify-between">
-      <a className="text-slate-700 dark:text-slate-200 ml-1">Home</a>
+      <a className="text-slate-700 dark:text-slate-200 ml-1 text-md">Home</a>
       <button onClick={onButtonClick} className="bg-gray-200 mr-1 dark:bg-slate-700 rounded-xl p-2">
         {theme === "light" ? (
           <svg
